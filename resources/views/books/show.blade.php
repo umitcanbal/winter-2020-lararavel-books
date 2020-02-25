@@ -5,6 +5,7 @@
     <div>
         <h1>{{ $book->title }}</h1>
         <p>{{ $book->authors }}</p>
+        <p>Published by: {{ $book->publisher }}</p>
         <a href="{{ action('BookORMController@index') }}">
             Back to index
         </a>

@@ -23,6 +23,17 @@ Route::get('/books', 'BookController@index');
 Route::get('/books-orm', 'BookORMController@index');
 Route::get('/books-orm/create', 'BookORMController@create');
 Route::get('/books-orm/{id}', 'BookORMController@show');
+Route::post('/books-orm', 'BookORMController@store');
+
+Route::get('/books-orm/{id}/edit', 'BookORMController@edit');
+Route::post('/books-orm/{id}/edit', 'BookORMController@update');
+
+Route::get('/books-orm/{id}/delete', 'BookORMController@delete');
+
+
+
+
+
 
 Route::get('/publishers', 'PublisherController@index');
 Route::get('/publishers/create', 'PublisherController@create');

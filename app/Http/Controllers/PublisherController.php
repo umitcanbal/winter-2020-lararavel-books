@@ -31,7 +31,7 @@ class PublisherController extends Controller
         $p = new Publisher;
 
         // Fill the attributes (columns) of that object
-        $p->title = $request->input('title');
+        $p->title = $request->input('publisher_title');
 
         // Save it to DB
         $p->save();
