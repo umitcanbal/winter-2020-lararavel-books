@@ -23,3 +23,7 @@ Route::get('/books', 'BookController@index');
 Route::get('/books-orm', 'BookORMController@index');
 Route::get('/books-orm/create', 'BookORMController@create');
 Route::get('/books-orm/{id}', 'BookORMController@show');
+
+Route::get('/publishers', 'PublisherController@index');
+Route::get('/publishers/{id}', 'PublisherController@show');
+
