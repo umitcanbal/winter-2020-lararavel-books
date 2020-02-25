@@ -21,4 +21,22 @@ class PublisherController extends Controller
         return view('publishers.show',
             compact('publisher', 'books'));
     }
+
+    public function create(){
+        return view('publishers/create');
+    }
+
+    public function store(Request $request){
+        // Create empty object of type `Publisher`
+        $p = new Publisher;
+
+        // Fill the attributes (columns) of that object
+        $p->title = $request->input('title');
+
+        // Save it to DB
+        $p->save();
+
+        return $p;
+    }
+
 }
