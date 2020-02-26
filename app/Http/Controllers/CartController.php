@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\CartItem;
+use Illuminate\Http\Request;
 
 class CartController extends Controller
 {
@@ -34,4 +35,14 @@ class CartController extends Controller
         return redirect('/cart');
     }
 
+    public function postAdd(Request $request){
+        $i = new CartItem;
+        $i->book_id = $request->input('book_id');
+        $i->count = 1;
+        $i->save();
+
+        return redirect('/cart');
+
+
+    }
 }

@@ -14,6 +14,11 @@
             <a href="/cart/add/{{ $book->id }}">
                 Add to cart
             </a>
+            <form action="/cart/add" method="post">
+                @csrf
+                <input type="hidden" name="book_id" value="{{ $book->id }}">
+                <input type="submit" value="Add to cart"/>
+            </form>
         </div>
     </div>
 @endforeach
