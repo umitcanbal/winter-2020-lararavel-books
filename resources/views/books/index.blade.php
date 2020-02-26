@@ -10,6 +10,10 @@
             <a href="{{ action('BookORMController@show', [$book->id]) }}">
                 Read more...
             </a>
+            <br>
+            <a href="/cart/add/{{ $book->id }}">
+                Add to cart
+            </a>
         </div>
     </div>
 @endforeach
