@@ -41,3 +41,4 @@ Route::get('/publishers/{id}', 'PublisherController@show');
 Route::post('/publishers', 'PublisherController@store');
 
 
+2. committen yazıyorum
